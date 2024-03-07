@@ -8,5 +8,5 @@ export interface MedicineType {
   expirationDate: Date;
   dosageInstructions: string;
   contraindications: string[] | null;
-  photos: string[] | null;
+  photo: string[] | null;
 }
