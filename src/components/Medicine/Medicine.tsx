@@ -2,7 +2,7 @@ import React, { FC, useContext } from 'react';
 import { MedicineType } from '../../types/Medicine';
 import { BsPlus, BsEyeFill } from 'react-icons/bs'; 
 import { Link } from 'react-router-dom';
-import { title } from 'process';
+import { API_HOST } from '../../utils/constants';
 import { CartContext } from '../../contexts/CartContext';
 
 interface Props {
@@ -21,19 +21,17 @@ const Medicine: FC<Props> = (props) => {
 
   return (
     <div>
-    {/* Product Image */}
       <div className='"flex flex-col bg-white rounded-lg shadow-lg overflow-hidden 
         border border-[#e4e4e4] h-[300px] mb-4 relative overflow-hidden group transition'
       >
         <div className='w-full h-full flex justify-center items-center'>
           <img 
             className='max-h-[160px] group-hover:scale-110 transition duration-300'
-            src={`http://localhost:3008/${photo}`}
+            src={`${API_HOST}${photo}`}
             alt=''
           />
         </div>
 
-        {/* Buttons */}
         <div className='absolute top-6 -right-11 group-hover:right-5 p-2 flex 
           flex-col items-center justify-center gap-y-2 
           opacity-0 group-hover:opacity-100 transition-all duration-300'
@@ -51,7 +49,6 @@ const Medicine: FC<Props> = (props) => {
         </div>
       </div>
 
-      {/* Product Details */}
       <div>
         <Link to={`/medicine/${id}`}>
           <h2 className='font-semibold mb-1'>{name}</h2>

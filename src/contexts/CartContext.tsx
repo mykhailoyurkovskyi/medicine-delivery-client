@@ -46,19 +46,15 @@ export const CartProvider: React.FC<Props> = ({ children }) => {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    const total = cart.reduce((acc, currItem) => {
-      return acc + currItem.price * currItem.amount;
-    }, 0);
-
-    setTotal(total);
-  }, [cart]);
-
-  useEffect(() => {
-    if(cart) {
+    if (cart) {
+      const total = cart.reduce((acc, currItem) => {
+        return acc + currItem.price * currItem.amount;
+      }, 0);
+      setTotal(total);
+  
       const amount = cart.reduce((acc, currItem) => {
         return acc + currItem.amount;
       }, 0);
-
       setItemAmount(amount);
     }
   }, [cart]);

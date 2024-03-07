@@ -58,7 +58,6 @@ const Home = () => {
       <div className="container mx-auto">
         <div className="flex justify-between items-center mb-4">
         
-          {/* Filter input */}
           <input
             type="text"
             placeholder="Search by name..."
@@ -67,7 +66,6 @@ const Home = () => {
             className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-primary"
           />
         
-          {/* Sort select */}
           <select
             value={sortBy}
             onChange={handleSortChange}
@@ -81,7 +79,6 @@ const Home = () => {
 
           </select>
 
-          {/* Sort order toggle button */}
           <button
             onClick={toggleSortOrder}
             className="px-4 py-2 border-0 text-white bg-indigo-500 rounded-md hover:bg-indigo-600 
@@ -91,7 +88,6 @@ const Home = () => {
             {sortOrder === 'asc' ? 'Ascending' : 'Descending'}
           </button>
 
-          {/* Items per page select */}
         <select
           value={itemsPerPage}
           onChange={handleItemsPerPageChange}
@@ -100,13 +96,11 @@ const Home = () => {
           <option value="5">5 per page</option>
           <option value="10">10 per page</option>
           <option value="20">20 per page</option>
-          {/* Add more options if needed */}
         </select>
         </div>
 
         
 
-        {/* Display medicines or message if there are no results */}
           {filteredAndSortedMedicines.length > 0 ? (
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-[30px] max-w-sm mx-auto md:max-w-none md:mx-0'>
               {paginatedMedicines.map(medicine => (
@@ -120,7 +114,6 @@ const Home = () => {
           )}
         </div>
 
-        {/* Pagination */}
        <div className="flex justify-center mt-4">
         {Array.from({ length: totalPages }, (_, i) => (
           <button

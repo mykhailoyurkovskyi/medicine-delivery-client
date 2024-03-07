@@ -1,19 +1,20 @@
 import React, { FC, useContext } from 'react';
 import { CartContext, CartItemType } from '../../contexts/CartContext';
 import { Link } from 'react-router-dom';
+import { API_HOST } from '../../utils/constants';
 import { IoMdAdd, IoMdClose, IoMdRemove } from 'react-icons/io';
 
 type Props = {
   cart: CartItemType
 }
 
-const CartItem: FC<Props> = (props) => {
+const CartItem: FC<Props> = ({ cart }) => {
   const { 
     removeFromCart,
     increaseAmount,
     decreaseAmount 
   } = useContext(CartContext);
-  const {id, name, price, photo, amount} = props.cart;
+  const {id, name, price, photo, amount} = cart;
 
 
   return (
@@ -25,7 +26,7 @@ const CartItem: FC<Props> = (props) => {
         <Link to={`/medicine/${id}`}>
           <img
             className='max-w-[80px]'
-            src={`http://localhost:3008/${photo}`} alt='' 
+            src={`${API_HOST}${photo}`} alt='' 
           />
         </Link>
 
