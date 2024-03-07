@@ -71,16 +71,22 @@ const Home = () => {
           <select
             value={sortBy}
             onChange={handleSortChange}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-primary"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
+              focus:ring-blue-500 focus:border-blue-500 block w-[200px] p-2.5 dark:bg-gray-700 
+              dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 
+              dark:focus:border-blue-500"
           >
             <option value="">Sort by</option>
             <option value="price">Price</option>
 
           </select>
+
           {/* Sort order toggle button */}
           <button
             onClick={toggleSortOrder}
-            className="px-3 py-2 border border-gray-300 rounded-md bg-gray-100 hover:bg-gray-200 focus:outline-none focus:bg-gray-200"
+            className="px-4 py-2 border-0 text-white bg-indigo-500 rounded-md hover:bg-indigo-600 
+              active:bg-indigo-700 focus:outline-none focus:ring-2 
+              focus:ring-offset-2 focus:ring-indigo-500 w-[150px]"
           >
             {sortOrder === 'asc' ? 'Ascending' : 'Descending'}
           </button>

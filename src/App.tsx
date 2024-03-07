@@ -6,6 +6,7 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import MedicineDetails from './pages/MedicineDetail/MedicineDetail';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/medicine/:id' element={<MedicineDetails />} />
+          <Route path='/checkout' element={<Checkout />} />
         </Routes>
         <Sidebar />
         <Footer />

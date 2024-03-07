@@ -55,17 +55,17 @@ const Sidebar = () => {
             </div>
           </div>
     
-          <Link 
+         {/*  <Link 
             to={'/'}
             className='bg-gray-200 flex p-4 justify-center i
               tems-center text-primary w-full font-medium 
               hover:bg-gray-300 transition duration-300 ease-in-out'
           >
             View Cart
-          </Link>
+          </Link> */}
       
           <Link 
-            to={'/'}
+            to={'/checkout'}
             className='bg-primary flex p-4 justify-center i
             tems-center text-white w-full font-medium 
             hover:bg-opacity-80 transition duration-300 ease-in-out'
