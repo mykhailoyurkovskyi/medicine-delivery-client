@@ -23,11 +23,15 @@ const Header = () => {
           fixed w-full z-10 transition-all`}
     >
       <div className='container mx-auto flex items-center justify-between h-full'>
+
         <Link to={'/'}>
+
           <div>
             <img className='w-[40px] hover:scale-110 transition duration-300 ease-in-out' src={favicon} alt='' />
           </div>
+
         </Link>
+        
           <div 
           onClick={() => setIsOpen(!isOpen)}
           className='cursor-pointer flex relative'

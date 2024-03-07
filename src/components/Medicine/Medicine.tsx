@@ -34,6 +34,7 @@ const Medicine: FC<Props> = (props) => {
             alt=''
           />
         </div>
+
         {/* Buttons */}
         <div className='absolute top-6 -right-11 group-hover:right-5 p-2 flex flex-col items-center justify-center gap-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300'>
           <button onClick={() => addToCart(props.medicine, id)}>
@@ -41,9 +42,11 @@ const Medicine: FC<Props> = (props) => {
               <BsPlus className='text-3xl'/>
             </div>
           </button>
+
           <Link to={`/medicine/${id}`} className='w-12 h-12 bg-white flex justify-center items-center text-primary drop-shadow-xl rounded-full'>
             <BsEyeFill />
           </Link>
+          
         </div>
       </div>
 

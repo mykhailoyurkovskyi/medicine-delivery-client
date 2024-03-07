@@ -15,6 +15,7 @@ const Hero = () => {
             Over 50,000 products for your health and beauty <br />
             <span className='font-semibold'>Permanent Promotions and Discounts. Loyalty program.</span>
           </h1>
+          
           <Link to={'/'} className='self-start uppercase font-semibold border-b-2 border-primary'>
             Discover more
           </Link>
